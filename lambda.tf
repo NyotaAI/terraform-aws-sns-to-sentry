@@ -7,7 +7,7 @@ resource "aws_lambda_function" "sns_to_sentry" {
   function_name = "${var.name}-sns-to-sentry"
   handler       = "sns_to_sentry.lambda_handler.sns_to_sentry"
   role          = aws_iam_role.sns_to_sentry.arn
-  runtime       = "python3.7"
+  runtime       = "python3.9"
 
   timeout     = 300
   memory_size = 128
